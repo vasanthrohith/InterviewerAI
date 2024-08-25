@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "interviewerai"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+langchain = "^0.2.14"
+langchain-openai = "^0.1.22"
+python-dotenv = "1.0.1"
+openai = "^1.42.0"
+langgraph = "^0.2.14"
+pypdf2 = "3.0.1"
+langchain-community = "^0.2.12"
+spire-pdf = "10.8.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
