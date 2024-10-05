@@ -77,7 +77,6 @@ class MainQuestion_flow(InterviewerBot):
         count=0
     
         while True:                        
-
             print("History >>> ", self.chain_memory.load_memory_variables({}))
             if count==0:
                  user_input = "Hi, my name is vasanth"
@@ -105,14 +104,12 @@ class MainQuestion_flow(InterviewerBot):
             verbose=True,
             )
 
-    
             bot_response = interviewer_1_main.predict(input=user_input)
             print("BOT : ",bot_response)
             print("count > ", count)
-            # if count%2:
+            
             ai["ai"]=bot_response
             
-
             count+=1
 
     def run_nodes(self, ):

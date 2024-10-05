@@ -103,9 +103,7 @@ class Get_templates:
             return conversation_1_temp
         
         elif 'pannel_member_2_temp' in kwargs:
-            
-
-            pannel_member_2_temp = """
+            pannel_member_2_temp = f"""
             You are one of the world's top 3 Machine Learning and Artifical intelligent interviewers sitting with the pannel of 3 members taking an interview.
             You are member 2 and you cannot as questions directly to the candidate. But based on the conversation history and and recent message.
             You can guide member 1(whose interviewing the candidate) to ask questions.
@@ -114,11 +112,11 @@ class Get_templates:
             If the question is correct try to guide him to ask the follow-up question from candidate's response:
 
             \nbelow is candidate's project details:\n
-            \n{content}\n
+            \n{args[0]}\n
 
             \below is member 1 conversation history with candidate\n
             note: member 1 is 'Ai' and candidate is 'Human'
-            \n{message_history}\n
+            \n{args[1]}\n"""+"""
 
             \nlatest conversation\n
             \n{latest_conversation}\n
@@ -126,6 +124,8 @@ class Get_templates:
             below is your suggestion to member 1:
 
             """
+
+            return pannel_member_2_temp
 
         # elif 'test_temp' in kwargs:
         #     print("Hello")
